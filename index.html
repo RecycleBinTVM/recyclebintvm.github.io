@@ -26,8 +26,21 @@
 
     <!-- script
     ================================================== -->
+    <script>
+        function festival() {
+            document.getElementById("TextToDisplay").innerHTML = "Toilet Tales : <br>An Exploration of Public Toilet Phenomenon" ;
+          };
+          function fellowship() {
+            document.getElementById("TextToDisplay").innerHTML = "Toilet Fellowship <br><h1 style='color: rgb(200, 200, 200);'>2022</h1><br>" ;
+          };
+          function conference() {
+            document.getElementById("TextToDisplay").innerHTML = "Toilet Conference <br><h1 style='color: rgb(200, 200, 200);'>2022</h1><br>" ;
+          };
+    </script>
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
+    
+   
 
     <!-- favicons
     ================================================== -->
@@ -106,19 +119,44 @@
         <div class="home-content">
 
             <div class="row home-content__main">
-
-                <!-- <h3>Toilet Tales</h3> -->
-                
-              
-                <h1>
-                    Toilet Tales : <br> An Exploration of Public Toilet Phenomenon
+                             
+                <h1 id="TextToDisplay">
+                     Toilet Tales : <br> An Exploration of Public Toilet Phenomenon
                 </h1>
-               
+                
                 <!-- <div class="home-content__buttons">  delete content
                     <a href="https://docs.google.com/forms/d/16sLXqMewCDDBbboCdSqBhKw3IfnFQhy5UHvKxQ7ZQto" class="smoothscroll btn btn--stroke" style="width: 292px">
                         Competiton Registration
                     </a>
                 </div> -->
+
+            </div>
+            <div align="center" style="margin-top: 2cm;" data-aos="fade-up">
+                <button style="width: 15px;
+                height: 15px;
+                padding: 6px 0px;
+                border-radius: 15px;
+                background-color: rgb(160, 7, 7);
+                border-color: rgb(160, 7, 7);" type="button" onclick="festival()">
+                </button>
+
+                <button style="width: 15px;
+                height: 15px;
+                padding: 6px 0px;
+                margin-left: .5cm;
+                margin-right: .5cm;
+                border-radius: 15px;
+                background-color: rgb(160, 7, 7);
+                border-color: rgb(160, 7, 7);" type="button" onclick="fellowship()">
+                </button>
+
+                <button style="width: 15px;
+                height: 15px;
+                padding: 6px 0px;
+                border-radius: 15px;
+                background-color: rgb(160, 7, 7);
+                border-color: rgb(160, 7, 7);" type="button" onclick="conference()">
+                </button>
 
             </div>
 
@@ -659,6 +697,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    
 
 </body>
 
