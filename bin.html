@@ -57,18 +57,56 @@
                 <h3>Navigation</h3>
                 
                 <ul class="header-nav__list">
-                        <li class="current"><a href="index.html" title="home">Home</a></li>
-                        <li><a href="bin.html" title="about">Recycle Bin</a></li>
-                        <li><a href="itfk.html" title="services">ITF <sub>chennai edition</sub></a></li>
-                        <li><a href="images/Newsletter.pdf">Newsletter</a></li>
-                        <li><a href="images/Adayalam.pdf">Adayalam</a></li>
-                        <li><a href="images/Report.pdf">Report</a></li>
-                        <li><a href="#">Competition</a></li>
-                        <li><a href="images/2. Volunteers for mapathon.jpg">Mapathon</a></li>
-                        <li><a href="images/1. Toilet fellowship.jpg">Toilet Fellowship</a></li>
-                        <li><a href="media.html">Media</a></li>
+                        <li class="current"><a href="index.html" title="home" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Home</a></li>
+                        <li><a href="bin.html" title="about" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Recycle Bin</a></li>
+                        <li><a href="itfk.html" title="services" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>ITF <sub>chennai edition</sub></a></li>
+                        <li><a href="images/Newsletter.pdf" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Newsletter</a></li>
+                        <li><a href="images/Adayalam.pdf" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Adayalam</a></li>
+                        <li><a href="images/Report.pdf" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Report</a></li>
+                        <li><a href="#" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Competition</a></li>
+                        <li><a href="mepathon.html" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Mapathon</a></li>
+                        <li><a href="fellowship.html" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Toilet Fellowship</a></li>
+                        <li><a href="media.html" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Media</a></li>
                         <!-- <li><a href="https://docs.google.com/forms/d/16sLXqMewCDDBbboCdSqBhKw3IfnFQhy5UHvKxQ7ZQto">Competition</a></li> -->
-               </ul>
+                </ul>
+
+                <style>
+                    .link {
+                        text-decoration: none;
+                        padding-left: 15px;
+                        position: relative;
+                        transition: 1s;
+                        }
+
+                        .link:hover {
+                        padding-left: 0;
+                        }
+
+                        .link:hover .link--decoration {
+                        animation: in 1s ease both;
+                        }
+
+                        .link--decoration {
+                        animation: out 1s ease both;
+                        left: 0;
+                        position: absolute;
+                        }
+
+                        @keyframes in {
+                        to {
+                            left: calc(100% + 5px);
+                        }
+                        }
+
+                        @keyframes out {
+                        from {
+                            left: calc(100% + 5px);
+                        }
+                        to {
+                            left: 0;
+                        }
+                        }
+                </style>
     
                 <ul class="header-nav__social">
                     <li>
@@ -314,27 +352,17 @@
         </div> <!-- end intro-wrap -->
 
         <div class="row works-content">
-            <div class="col-full masonry-wrap">
+            <div class="col-full masonry-wrap" align="center">
                 <div class="masonry">
 
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                                 
                             <div class="item-folio__thumb" style="margin-top: 1cm;">
-                                <a href="images\team- caricature\GANGA DILEEP C.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                <a href="images\team- caricature\GANGA DILEEP C.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
                                     <img src="images\team- caricature\GANGA DILEEP C.jpg" 
-                                    srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                                    images\team- caricature\GANGA DILEEP C.jpg, 
-                                    images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                                    images\team- caricature\HEMALATHA MOHAN.jpg, 
-                                    images\team- caricature\JEEVA MALAR.jpg, 
-                                    images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                                   images\team- caricature\MEENAKSHI MEERA.jpg, 
-                                   images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                                   images\team- caricature\SHEBIN GEORGE.jpg, 
-                                   images\team- caricature\SUBAHAN P A.jpg, 
-                                   images\team- caricature\SUNNY KUMAR GUPTA.jpg,
-                                   images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
+                                    srcset="
+                                    images\team- caricature\GANGA DILEEP C.jpg" width="150" height="150" alt="">
                                 </a>
                                 <div class="desc">Ganga Dileep C- Founder and CEO, principal architect and Urban Designer </div>
                             </div>    
@@ -345,20 +373,9 @@
                         <div class="item-folio">
                                 
                             <div class="item-folio__thumb" style="margin-top: 1cm;">
-                                <a href="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                <a href="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
                                     <img src="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg" 
-                                         srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                                          images\team- caricature\GANGA DILEEP C.jpg, 
-                                          images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                                          images\team- caricature\HEMALATHA MOHAN.jpg, 
-                                          images\team- caricature\JEEVA MALAR.jpg, 
-                                          images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                                         images\team- caricature\MEENAKSHI MEERA.jpg, 
-                                         images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                                         images\team- caricature\SHEBIN GEORGE.jpg, 
-                                         images\team- caricature\SUBAHAN P A.jpg, 
-                                         images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                                         images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
+                                         srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg" width="150" height="150" alt="">
                                 </a>
                                 <div class="desc">Ashwin Sivakumar- Urban Designer  </div>
                             </div>    
@@ -370,20 +387,10 @@
                         <div class="item-folio">
                                 
                             <div class="item-folio__thumb" style="margin-top: .8cm;">
-                                <a href="images\team- caricature\GOWTHAM JAYASEELAN.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                <a href="images\team- caricature\GOWTHAM JAYASEELAN.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
                                     <img src="images\team- caricature\GOWTHAM JAYASEELAN.jpg" 
-                                    srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                                    images\team- caricature\GANGA DILEEP C.jpg, 
-                                    images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                                    images\team- caricature\HEMALATHA MOHAN.jpg, 
-                                    images\team- caricature\JEEVA MALAR.jpg, 
-                                    images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                                   images\team- caricature\MEENAKSHI MEERA.jpg, 
-                                   images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                                   images\team- caricature\SHEBIN GEORGE.jpg, 
-                                   images\team- caricature\SUBAHAN P A.jpg, 
-                                   images\team- caricature\SUNNY KUMAR GUPTA.jpg 
-                                   images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
+                                    srcset="
+                                    images\team- caricature\GOWTHAM JAYASEELAN.jpg" width="150" height="150" alt="">
                                 </a>
                                 <div class="desc">Gowtham Jayseelan- Architect </div>
                             </div>    
@@ -393,214 +400,124 @@
                         <div class="item-folio">
                                 
                             <div class="item-folio__thumb">
-                                <a href="images\team- caricature\HEMALATHA MOHAN.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                                <a href="images\team- caricature\HEMALATHA MOHAN.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
                                     <img src="images\team- caricature\HEMALATHA MOHAN.jpg" 
-                                    srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                                    images\team- caricature\GANGA DILEEP C.jpg, 
-                                    images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                                    images\team- caricature\HEMALATHA MOHAN.jpg, 
-                                    images\team- caricature\JEEVA MALAR.jpg, 
-                                    images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                                   images\team- caricature\MEENAKSHI MEERA.jpg, 
-                                   images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                                   images\team- caricature\SHEBIN GEORGE.jpg, 
-                                   images\team- caricature\SUBAHAN P A.jpg, 
-                                   images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                                   images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
+                                    srcset="
+                                    images\team- caricature\HEMALATHA MOHAN.jpg" width="150" height="150" alt="">
                                 </a>
                                 <div class="desc">Hemalatha Mohan- Urban Planner  </div>
                             </div>    
                         </div>
                     </div>
-                </div> <!-- end masonry -->
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                            
-                        <div class="item-folio__thumb">
-                            <a href="images\team- caricature\JEEVA MALAR.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                <img src="images\team- caricature\JEEVA MALAR.jpg" 
-                                srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                                images\team- caricature\GANGA DILEEP C.jpg, 
-                                images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                                images\team- caricature\HEMALATHA MOHAN.jpg, 
-                                images\team- caricature\JEEVA MALAR.jpg, 
-                                images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                               images\team- caricature\MEENAKSHI MEERA.jpg, 
-                               images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                               images\team- caricature\SHEBIN GEORGE.jpg, 
-                               images\team- caricature\SUBAHAN P A.jpg, 
-                               images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                               images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
-                            </a>
-                            <div class="desc">Jeeva Malar- Office Manager </div>
-                        </div>    
-                    </div>
-                </div> <!-- end masonry__brick -->
+                    </div> <!-- end masonry -->
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images\team- caricature\JEEVA MALAR.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
+                                    <img src="images\team- caricature\JEEVA MALAR.jpg" 
+                                    srcset="
+                                    images\team- caricature\JEEVA MALAR.jpg" width="150" height="150" alt="">
+                                </a>
+                                <div class="desc">Jeeva Malar- Office Manager </div>
+                            </div>    
+                        </div>
+                    </div> <!-- end masonry__brick -->
 
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                            
-                        <div class="item-folio__thumb">
-                            <a href="images\team- caricature\MALINI SASHIDHARAN.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                <img src="images\team- caricature\MALINI SASHIDHARAN.jpg" 
-                                srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                                images\team- caricature\GANGA DILEEP C.jpg, 
-                                images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                                images\team- caricature\HEMALATHA MOHAN.jpg, 
-                                images\team- caricature\JEEVA MALAR.jpg, 
-                                images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                               images\team- caricature\MEENAKSHI MEERA.jpg, 
-                               images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                               images\team- caricature\SHEBIN GEORGE.jpg, 
-                               images\team- caricature\SUBAHAN P A.jpg, 
-                               images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                               images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
-                            </a>
-                            <div class="desc">Malini Sasidharan- Public space Designer</div>
-                        </div>    
-                    </div>
-                </div> <!-- end masonry__brick -->
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                            
-                        <div class="item-folio__thumb">
-                            <a href="images\team- caricature\MEENAKSHI MEERA.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                <img src="images\team- caricature\MEENAKSHI MEERA.jpg" 
-                                srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                                images\team- caricature\GANGA DILEEP C.jpg, 
-                                images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                                images\team- caricature\HEMALATHA MOHAN.jpg, 
-                                images\team- caricature\JEEVA MALAR.jpg, 
-                                images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                               images\team- caricature\MEENAKSHI MEERA.jpg, 
-                               images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                               images\team- caricature\SHEBIN GEORGE.jpg, 
-                               images\team- caricature\SUBAHAN P A.jpg, 
-                               images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                               images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
-                            </a>
-                            <div class="desc">Meenakshi Meera- Urban Designer </div>
-                        </div>    
-                    </div>
-                </div>  <!-- end masonry__brick -->
-                <div class="masonry__brick" data-aos="fade-up">
-                    <div class="item-folio">
-                            
-                        <div class="item-folio__thumb">
-                            <a href="images\team- caricature\PRADEEPA GANGADHARAN.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                                <img src="images\team- caricature\PRADEEPA GANGADHARAN.jpg" 
-                                srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                                images\team- caricature\GANGA DILEEP C.jpg, 
-                                images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                                images\team- caricature\HEMALATHA MOHAN.jpg, 
-                                images\team- caricature\JEEVA MALAR.jpg, 
-                                images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                               images\team- caricature\MEENAKSHI MEERA.jpg, 
-                               images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                               images\team- caricature\SHEBIN GEORGE.jpg, 
-                               images\team- caricature\SUBAHAN P A.jpg, 
-                               images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                               images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
-                            </a>
-                            <div class="desc">Pradeepa Gangadharan- Draughtsman</div>
-                        </div>    
-                    </div>
-                </div>
-            </div> <!-- end masonry -->
-            <div class="masonry__brick" data-aos="fade-up">
-                <div class="item-folio">
-                        
-                    <div class="item-folio__thumb">
-                        <a href="images\team- caricature\SHEBIN GEORGE.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                            <img src="images\team- caricature\SHEBIN GEORGE.jpg" 
-                            srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                            images\team- caricature\GANGA DILEEP C.jpg, 
-                            images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                            images\team- caricature\HEMALATHA MOHAN.jpg, 
-                            images\team- caricature\JEEVA MALAR.jpg, 
-                            images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                           images\team- caricature\MEENAKSHI MEERA.jpg, 
-                           images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                           images\team- caricature\SHEBIN GEORGE.jpg, 
-                           images\team- caricature\SUBAHAN P A.jpg, 
-                           images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                           images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
-                        </a>
-                        <div class="desc">Shebin George- Architect</div>
-                    </div>    
-                </div>
-            </div> <!-- end masonry__brick -->
-            <div class="masonry__brick" data-aos="fade-up">
-                <div class="item-folio">
-                        
-                    <div class="item-folio__thumb">
-                        <a href="images\team- caricature\SUBAHAN P A.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                            <img src="images\team- caricature\SUBAHAN P A.jpg" 
-                            srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                            images\team- caricature\GANGA DILEEP C.jpg, 
-                            images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                            images\team- caricature\HEMALATHA MOHAN.jpg, 
-                            images\team- caricature\JEEVA MALAR.jpg, 
-                            images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                           images\team- caricature\MEENAKSHI MEERA.jpg, 
-                           images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                           images\team- caricature\SHEBIN GEORGE.jpg, 
-                           images\team- caricature\SUBAHAN P A.jpg, 
-                           images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                           images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
-                         </a>
-                         <div class="desc">Subahan P A- Civil Engineer </div>
-                    </div>    
-                </div>
-            </div> <!-- end masonry__brick -->
-            <div class="masonry__brick" data-aos="fade-up">
-                <div class="item-folio">
-                        
-                    <div class="item-folio__thumb">
-                        <a href="images\team- caricature\Mr HALO THE CELEBRITY.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                            <img src="images\team- caricature\Mr HALO THE CELEBRITY.jpg" 
-                            srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                            images\team- caricature\GANGA DILEEP C.jpg, 
-                            images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                            images\team- caricature\HEMALATHA MOHAN.jpg, 
-                            images\team- caricature\JEEVA MALAR.jpg, 
-                            images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                           images\team- caricature\MEENAKSHI MEERA.jpg, 
-                           images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                           images\team- caricature\SHEBIN GEORGE.jpg, 
-                           images\team- caricature\SUBAHAN P A.jpg, 
-                           images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                           images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
-                        </a>
-                        <div class="desc">Mr Halo- The Celebrity </div>
-                    </div>    
-                </div>
-            </div> <!-- end masonry__brick -->
-            <div class="masonry__brick" data-aos="fade-up">
-                <div class="item-folio">
-                        
-                    <div class="item-folio__thumb">
-                        <a href="images\team- caricature\SUNNY KUMAR GUPTA.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                            <img src="images\team- caricature\SUNNY KUMAR GUPTA.jpg" 
-                            srcset="images\team- caricature\ASHWIN SIVAKUMAR 01.jpg,
-                            images\team- caricature\GANGA DILEEP C.jpg, 
-                            images\team- caricature\GOWTHAM JAYASEELAN.jpg, 
-                            images\team- caricature\HEMALATHA MOHAN.jpg, 
-                            images\team- caricature\JEEVA MALAR.jpg, 
-                            images\team- caricature\MALINI SASHIDHARAN.jpg, 
-                           images\team- caricature\MEENAKSHI MEERA.jpg, 
-                           images\team- caricature\PRADEEPA GANGADHARAN.jpg, 
-                           images\team- caricature\SHEBIN GEORGE.jpg, 
-                           images\team- caricature\SUBAHAN P A.jpg, 
-                           images\team- caricature\SUNNY KUMAR GUPTA.jpg, 
-                           images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
-                        </a>
-                        <div class="desc">Sunny Kumar Gupta- Architect </div>
-                    </div>    
-                </div>
-            </div>
-        
-        </div> <!-- end masonry -->
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images\team- caricature\MALINI SASHIDHARAN.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
+                                    <img src="images\team- caricature\MALINI SASHIDHARAN.jpg" 
+                                    srcset="
+                                    images\team- caricature\MALINI SASHIDHARAN.jpg" width="150" height="150" alt="">
+                                </a>
+                                <div class="desc">Malini Sasidharan- Public space Designer</div>
+                            </div>    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images\team- caricature\MEENAKSHI MEERA.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
+                                    <img src="images\team- caricature\MEENAKSHI MEERA.jpg" 
+                                    srcset="
+                                images\team- caricature\MEENAKSHI MEERA.jpg" width="150" height="150" alt="">
+                                </a>
+                                <div class="desc">Meenakshi Meera- Urban Designer </div>
+                            </div>    
+                        </div>
+                    </div>  <!-- end masonry__brick -->
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images\team- caricature\PRADEEPA GANGADHARAN.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
+                                    <img src="images\team- caricature\PRADEEPA GANGADHARAN.jpg" 
+                                    srcset="
+                                images\team- caricature\PRADEEPA GANGADHARAN.jpg" width="150" height="150" alt="">
+                                </a>
+                                <div class="desc">Pradeepa Gangadharan- Draughtsman</div>
+                            </div>    
+                        </div>
+                    </div> <!-- end masonry -->
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images\team- caricature\SHEBIN GEORGE.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
+                                    <img src="images\team- caricature\SHEBIN GEORGE.jpg" 
+                                    srcset="
+                                images\team- caricature\SHEBIN GEORGE.jpg" width="150" height="150" alt="">
+                                </a>
+                                <div class="desc">Shebin George- Architect</div>
+                            </div>    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images\team- caricature\SUBAHAN P A.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
+                                    <img src="images\team- caricature\SUBAHAN P A.jpg" 
+                                    srcset=" 
+                                images\team- caricature\SUBAHAN P A.jpg" width="150" height="150" alt="">
+                                </a>
+                                <div class="desc">Subahan P A- Civil Engineer </div>
+                            </div>    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images\team- caricature\SUNNY KUMAR GUPTA.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
+                                    <img src="images\team- caricature\SUNNY KUMAR GUPTA.jpg" 
+                                    srcset="
+                                images\team- caricature\SUNNY KUMAR GUPTA.jpg" width="150" height="150" alt="">
+                                </a>
+                                <div class="desc">Sunny Kumar Gupta- Architect </div>
+                            </div>    
+                        </div>
+                
+                
+                    </div> <!-- end masonry -->
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+                                
+                            <div class="item-folio__thumb">
+                                <a href="images\team- caricature\Mr HALO THE CELEBRITY.jpg" class="thumb-link" title="Woodcraft" data-size="1748x2480">
+                                    <img src="images\team- caricature\Mr HALO THE CELEBRITY.jpg" 
+                                    srcset="
+                                images\team- caricature\Mr HALO THE CELEBRITY.jpg" width="150" height="150" alt="">
+                                </a>
+                                <div class="desc">Mr Halo- The Celebrity </div>
+                            </div>    
+                        </div>
+                    </div> <!-- end masonry__brick -->
+                    
             </div> <!-- end col-full -->
         </div> <!-- end works-content -->
 
@@ -619,7 +536,7 @@
         </div> <!-- end section-header -->
 
         <div class="row clients-outer" data-aos="fade-up">
-            <div class="col-full">
+            <div class="col-full" align="center">
                 <div class="clients">
                     
                     <a href="https://www.sahridhaya.org/" title="" class="clients__slide"><img src="images/clients/sahridhaya.png" /></a>

@@ -56,18 +56,56 @@
                 <h3>Navigation</h3>
                 
                 <ul class="header-nav__list">
-                    <li class="current"><a href="index.html" title="home">Home</a></li>
-                    <li><a href="bin.html" title="about">Recycle Bin</a></li>
-                    <li><a href="itfk.html" title="services">ITF <sub>chennai edition</sub></a></li>
-                    <li><a href="images/Newsletter.pdf">Newsletter</a></li>
-                    <li><a href="images/Adayalam.pdf">Adayalam</a></li>
-                    <li><a href="images/Report.pdf">Report</a></li>
-                    <li><a href="#">Competition</a></li>
-                    <li><a href="images/2. Volunteers for mapathon.jpg">Mapathon</a></li>
-                        <li><a href="images/1. Toilet fellowship.jpg">Toilet Fellowship</a></li>
-                        <li><a href="media.html">Media</a></li>
+                    <li class="current"><a href="index.html" title="home" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Home</a></li>
+                    <li><a href="bin.html" title="about" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Recycle Bin</a></li>
+                    <li><a href="itfk.html" title="services" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>ITF <sub>chennai edition</sub></a></li>
+                    <li><a href="images/Newsletter.pdf" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Newsletter</a></li>
+                    <li><a href="images/Adayalam.pdf" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Adayalam</a></li>
+                    <li><a href="images/Report.pdf" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Report</a></li>
+                    <li><a href="#" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Competition</a></li>
+                    <li><a href="mepathon.html" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Mapathon</a></li>
+                    <li><a href="fellowship.html" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Toilet Fellowship</a></li>
+                    <li><a href="media.html" class="link"><span class="link--decoration">&dash;</span><span class="link--text"></span>Media</a></li>
                     <!-- <li><a href="https://docs.google.com/forms/d/16sLXqMewCDDBbboCdSqBhKw3IfnFQhy5UHvKxQ7ZQto">Competition</a></li> -->
-                </ul>    
+            </ul>
+
+            <style>
+                .link {
+                    text-decoration: none;
+                    padding-left: 15px;
+                    position: relative;
+                    transition: 1s;
+                    }
+
+                    .link:hover {
+                    padding-left: 0;
+                    }
+
+                    .link:hover .link--decoration {
+                    animation: in 1s ease both;
+                    }
+
+                    .link--decoration {
+                    animation: out 1s ease both;
+                    left: 0;
+                    position: absolute;
+                    }
+
+                    @keyframes in {
+                    to {
+                        left: calc(100% + 5px);
+                    }
+                    }
+
+                    @keyframes out {
+                    from {
+                        left: calc(100% + 5px);
+                    }
+                    to {
+                        left: 0;
+                    }
+                    }
+            </style>
     
                 <ul class="header-nav__social">
                     <li>
