@@ -284,7 +284,7 @@
         
         $('.smoothscroll').on('click', function (e) {
             var target = this.hash,
-            $target    = $(target);
+            $target    = $(target).get(0).atributes.href.value ;
             
                 e.preventDefault();
                 e.stopPropagation();
