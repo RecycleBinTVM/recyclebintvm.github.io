@@ -27,10 +27,19 @@
     <!-- script
     ================================================== -->
     <script>
+        let element = document.getElementById('animateid')
+
+
         function base() {
             document.getElementById("TextToDisplay").innerHTML = "Toilet Tales : <br>An Exploration of Public Toilet Phenomenon" ;
             document.getElementsByClassName("home-content__buttons")[0].style.display = 'none';
             document.getElementById("scrollbutton").style.marginTop = "5.4cm";
+            element.classList.add(".animate");
+  
+            setTimeout(function() {
+                element.classList.remove(".animate");
+            }, 500);
+            
           };
         function festival() {
             document.getElementById("TextToDisplay").innerHTML = "International Toilet Festival<br>Chennai Edition- 2 April 2022" ;
@@ -38,6 +47,11 @@
             document.getElementById("registrationButton").innerHTML = "Toilet Volunteers" ;
             document.getElementsByClassName("home-content__buttons")[0].style.display = 'block';
             document.getElementById("scrollbutton").style.marginTop = "1cm";
+            element.classList.add(".animate");
+  
+            setTimeout(function() {
+                element.classList.remove(".animate");
+            }, 500);
           };
           function fellowship() {
             document.getElementById("TextToDisplay").innerHTML = "Toilet Fellowship <br>2022" ;
@@ -171,22 +185,47 @@
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
 
+        <style>
+            .animate {
+            animation: fadeIn 500ms ease-out backwards;
+            }
+
+            @keyframes fadeIn {
+            from {
+                transform: translateX(250px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            }
+            #scrollbutton button:hover {
+                transform:scale(1.3,1.3);
+                -webkit-transform:scale(1.3,1.3);
+                -moz-transform:scale(1.3,1.3);
+            }
+        </style>
+
         <div class="home-content" data-aos="fade-up">
 
-            <div class="row home-content__main">
-                             
-                <h1 id="TextToDisplay">
-                     Toilet Tales : <br> An Exploration of Public Toilet Phenomenon
-                </h1>
+            <div id="animateid">
 
-            </div>
-            <!-- Links for Registration -->
-            <div class="home-content__buttons" style="margin-left: 4cm; display:none">
-                <h2 style="color: aliceblue;">Registration</h2>
-                <a href="#" id="registrationButton" class="smoothscroll btn btn--stroke" style="width: 292px">
-                    ##
-                </a>
-                
+                <div class="row home-content__main">
+                                
+                    <h1 id="TextToDisplay">
+                        Toilet Tales : <br> An Exploration of Public Toilet Phenomenon
+                    </h1>
+
+                </div>
+                <!-- Links for Registration -->
+                <div class="home-content__buttons" style="margin-left: 4cm; display:none">
+                    <h2 style="color: aliceblue;">Registration</h2>
+                    <a href="#" id="registrationButton" class="smoothscroll btn btn--stroke" style="width: 292px">
+                        ##
+                    </a>
+                    
+                </div>
             </div>
             <div align="center" id="scrollbutton" style="margin-top: 5.4cm;">
                 <button style="width: 15px;
@@ -194,7 +233,7 @@
                 padding: 6px 0px;
                 border-radius: 15px;
                 background-color: rgb(160, 7, 7);
-                border-color: rgb(160, 7, 7);" class="button" type="button" onclick="base()">
+                border-color: rgb(160, 7, 7);" class="button" id="bbb" type="button" onclick="base()">
                 </button>
                 
                 <button style="width: 15px;
@@ -225,16 +264,7 @@
                 </button>
 
             </div>
-            <style>
-                .button {
-                    transition: ease-in-out all 0.1s;
-                    transform: scale(1);
-                    }
-
-                    .button:active {
-                    transform: scale(1.2);
-                    }
-            </style>
+            
             
             
 
