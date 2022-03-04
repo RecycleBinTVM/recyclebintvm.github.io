@@ -27,18 +27,12 @@
     <!-- script
     ================================================== -->
     <script>
-        let element = document.getElementById('animateid')
 
 
         function base() {
             document.getElementById("TextToDisplay").innerHTML = "Toilet Tales : <br>An Exploration of Public Toilet Phenomenon" ;
             document.getElementsByClassName("home-content__buttons")[0].style.display = 'none';
-            // document.getElementById("scrollbutton").style.marginTop = "5.4cm";
-            element.classList.add(".animate");
-  
-            setTimeout(function() {
-                element.classList.remove(".animate");
-            }, 500);
+            
             
           };
         function festival() {
@@ -46,26 +40,19 @@
             document.getElementById("registrationButton").href="https://docs.google.com/forms/d/e/1FAIpQLScF_Xj8H4Hl1bwFhQua_mbBwXN6HWhn-QW5X7rXomfz5Pt0PQ/viewform?usp=sf_link";
             document.getElementById("registrationButton").innerHTML = "Toilet Volunteers" ;
             document.getElementsByClassName("home-content__buttons")[0].style.display = 'block';
-            // document.getElementById("scrollbutton").style.marginTop = "1cm";
-            element.classList.add(".animate");
-  
-            setTimeout(function() {
-                element.classList.remove(".animate");
-            }, 500);
+           
           };
           function fellowship() {
             document.getElementById("TextToDisplay").innerHTML = "Toilet Fellowship <br>2022" ;
             document.getElementById("registrationButton").href="https://docs.google.com/forms/d/e/1FAIpQLScDBnaiuQcVtKox0EC-AjEtlVv4H_JA0euhEHSXtVOObd6C-w/viewform?usp=sf_link";
             document.getElementById("registrationButton").innerHTML = "Toilet Fellowship" ;
             document.getElementsByClassName("home-content__buttons")[0].style.display = 'block';
-            // document.getElementById("scrollbutton").style.marginTop = "1cm";
           };
           function conference() {
             document.getElementById("TextToDisplay").innerHTML = "Toilet Conference 2022- 23<br>March 2022- 27 March 2022" ;
             document.getElementById("registrationButton").href="#";
             document.getElementById("registrationButton").innerHTML = "Toilet Conference" ;
             document.getElementsByClassName("home-content__buttons")[0].style.display = 'block';
-            // document.getElementById("scrollbutton").style.marginTop = "1cm";
           };
           
     </script>
